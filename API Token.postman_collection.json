@@ -1,0 +1,484 @@
+{
+	"info": {
+		"_postman_id": "1105db6f-e1d8-47f6-a4f9-51291e2d87ec",
+		"name": "API Token",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "25950728"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Inicio de Sección",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"sebastian@gmial.com\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDgxZjc0NDQyNTUwODg0YjAzOTY5ZDIiLCJuYW1lIjoiSmhvbiBBbGV4aXMgTWFjaGFkbyIsImVtYWlsIjoiam1hY2hhZG9hMTJAZ21pYWwuY29tIiwicm9sIjoiQURNSU4iLCJwYXNzd29yZCI6IiQyYSQxMCQuQVp0R2trVWl4QUZKamovYTg4N05PNXNucXBrMFloRERzYzguYXJ4NUZSUkpGZEJVOTN3bSIsImlhdCI6MTY4NjI2NDIzMywiZXhwIjoxNjg2MjY3ODMzfQ.MdKU30DdFy9wfUMr1hHSXBQ-iAI3BdB8SrmalMSLTcM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Sebastian\",\r\n    \"email\":\"sebastian12@gmial.com\",\r\n    \"rol\":\"ADMIN\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/user"
+					},
+					"response": []
+				},
+				{
+					"name": "Users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "jwt",
+							"jwt": {
+								"algorithm": "HS256",
+								"isSecretBase64Encoded": false,
+								"payload": "{}",
+								"addTokenTo": "header",
+								"headerPrefix": "Bearer",
+								"queryParamKey": "token",
+								"header": "{}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/user/"
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Jhon Alexis Machado\",\r\n    \"email\":\"jmachadoa12@gmial.com\",\r\n    \"rol\":\"ADMIN\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/user/6481f74442550884b03969d2"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDgxZjc0NDQyNTUwODg0YjAzOTY5ZDIiLCJuYW1lIjoiQWxleGlzIE1hY2hhZG8iLCJlbWFpbCI6ImptYWNoYWRvYTEyQGdtaWFsLmNvbSIsInJvbCI6IkFETUlOIiwicGFzc3dvcmQiOiIkMmEkMTAkNDNyWjkzWUNJVFhMMEp2NEY0dE5pZVNFdTFEaW5WQzlNV25LY2p6ZWR6ZVZ4eXRvN3dndmkiLCJpYXQiOjE2ODYyNDA3MjksImV4cCI6MTY4NjI0NDMyOX0.yHZkNApTFBX0aweiVIGkRhfaOtq-LNF4x1mV1o-Gr3o",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:4000/user/6482008e16a6dcdf702a11ef"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Brand",
+			"item": [
+				{
+					"name": "Create Brand",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDgxZjc0NDQyNTUwODg0YjAzOTY5ZDIiLCJuYW1lIjoiQWxleGlzIE1hY2hhZG8iLCJlbWFpbCI6ImptYWNoYWRvYTEyQGdtaWFsLmNvbSIsInJvbCI6IkFETUlOIiwicGFzc3dvcmQiOiIkMmEkMTAkNDNyWjkzWUNJVFhMMEp2NEY0dE5pZVNFdTFEaW5WQzlNV25LY2p6ZWR6ZVZ4eXRvN3dndmkiLCJpYXQiOjE2ODYyNDA3MjksImV4cCI6MTY4NjI0NDMyOX0.yHZkNApTFBX0aweiVIGkRhfaOtq-LNF4x1mV1o-Gr3o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"XIAOMI\",\r\n    \"state\":\"Active\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/brand"
+					},
+					"response": []
+				},
+				{
+					"name": "Brands",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDgxZjc0NDQyNTUwODg0YjAzOTY5ZDIiLCJuYW1lIjoiSmhvbiBBbGV4aXMgTWFjaGFkbyIsImVtYWlsIjoiam1hY2hhZG9hMTJAZ21pYWwuY29tIiwicm9sIjoiQURNSU4iLCJwYXNzd29yZCI6IiQyYSQxMCQuQVp0R2trVWl4QUZKamovYTg4N05PNXNucXBrMFloRERzYzguYXJ4NUZSUkpGZEJVOTN3bSIsImlhdCI6MTY4NjI0NTAzMSwiZXhwIjoxNjg2MjQ4NjMxfQ.qCwRo5dRB2G3CrM6P8v6Y-bjzSmuGPcfabog89DQfMA",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:4000/brand"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Brand",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDgxZjc0NDQyNTUwODg0YjAzOTY5ZDIiLCJuYW1lIjoiQWxleGlzIE1hY2hhZG8iLCJlbWFpbCI6ImptYWNoYWRvYTEyQGdtaWFsLmNvbSIsInJvbCI6IkFETUlOIiwicGFzc3dvcmQiOiIkMmEkMTAkNDNyWjkzWUNJVFhMMEp2NEY0dE5pZVNFdTFEaW5WQzlNV25LY2p6ZWR6ZVZ4eXRvN3dndmkiLCJpYXQiOjE2ODYyNDA3MjksImV4cCI6MTY4NjI0NDMyOX0.yHZkNApTFBX0aweiVIGkRhfaOtq-LNF4x1mV1o-Gr3o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"XIAOMI\",\r\n    \"state\":\"Active\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/brand/6482058caeab447b87d834b2"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Brand",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDgxZjc0NDQyNTUwODg0YjAzOTY5ZDIiLCJuYW1lIjoiQWxleGlzIE1hY2hhZG8iLCJlbWFpbCI6ImptYWNoYWRvYTEyQGdtaWFsLmNvbSIsInJvbCI6IkFETUlOIiwicGFzc3dvcmQiOiIkMmEkMTAkNDNyWjkzWUNJVFhMMEp2NEY0dE5pZVNFdTFEaW5WQzlNV25LY2p6ZWR6ZVZ4eXRvN3dndmkiLCJpYXQiOjE2ODYyNDA3MjksImV4cCI6MTY4NjI0NDMyOX0.yHZkNApTFBX0aweiVIGkRhfaOtq-LNF4x1mV1o-Gr3o",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:4000/brand/6482058caeab447b87d834b2"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Equipment Type",
+			"item": [
+				{
+					"name": "Create Equipment Type",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDgxZjc0NDQyNTUwODg0YjAzOTY5ZDIiLCJuYW1lIjoiQWxleGlzIE1hY2hhZG8iLCJlbWFpbCI6ImptYWNoYWRvYTEyQGdtaWFsLmNvbSIsInJvbCI6IkFETUlOIiwicGFzc3dvcmQiOiIkMmEkMTAkNDNyWjkzWUNJVFhMMEp2NEY0dE5pZVNFdTFEaW5WQzlNV25LY2p6ZWR6ZVZ4eXRvN3dndmkiLCJpYXQiOjE2ODYyNDA3MjksImV4cCI6MTY4NjI0NDMyOX0.yHZkNApTFBX0aweiVIGkRhfaOtq-LNF4x1mV1o-Gr3o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Celular\",\r\n    \"state\":\"Inactive\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/EquipmentType"
+					},
+					"response": []
+				},
+				{
+					"name": "Equipment Type",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDgxZjc0NDQyNTUwODg0YjAzOTY5ZDIiLCJuYW1lIjoiSmhvbiBBbGV4aXMgTWFjaGFkbyIsImVtYWlsIjoiam1hY2hhZG9hMTJAZ21pYWwuY29tIiwicm9sIjoiQURNSU4iLCJwYXNzd29yZCI6IiQyYSQxMCQuQVp0R2trVWl4QUZKamovYTg4N05PNXNucXBrMFloRERzYzguYXJ4NUZSUkpGZEJVOTN3bSIsImlhdCI6MTY4NjI0NTAzMSwiZXhwIjoxNjg2MjQ4NjMxfQ.qCwRo5dRB2G3CrM6P8v6Y-bjzSmuGPcfabog89DQfMA",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:4000/EquipmentType/"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Equipment Type",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDgxZjc0NDQyNTUwODg0YjAzOTY5ZDIiLCJuYW1lIjoiQWxleGlzIE1hY2hhZG8iLCJlbWFpbCI6ImptYWNoYWRvYTEyQGdtaWFsLmNvbSIsInJvbCI6IkFETUlOIiwicGFzc3dvcmQiOiIkMmEkMTAkNDNyWjkzWUNJVFhMMEp2NEY0dE5pZVNFdTFEaW5WQzlNV25LY2p6ZWR6ZVZ4eXRvN3dndmkiLCJpYXQiOjE2ODYyNDA3MjksImV4cCI6MTY4NjI0NDMyOX0.yHZkNApTFBX0aweiVIGkRhfaOtq-LNF4x1mV1o-Gr3o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Celular\",\r\n    \"state\":\"Active\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/EquipmentType/648207ab645a45040c0d1247"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Equipment Type",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDgxZjc0NDQyNTUwODg0YjAzOTY5ZDIiLCJuYW1lIjoiQWxleGlzIE1hY2hhZG8iLCJlbWFpbCI6ImptYWNoYWRvYTEyQGdtaWFsLmNvbSIsInJvbCI6IkFETUlOIiwicGFzc3dvcmQiOiIkMmEkMTAkNDNyWjkzWUNJVFhMMEp2NEY0dE5pZVNFdTFEaW5WQzlNV25LY2p6ZWR6ZVZ4eXRvN3dndmkiLCJpYXQiOjE2ODYyNDA3MjksImV4cCI6MTY4NjI0NDMyOX0.yHZkNApTFBX0aweiVIGkRhfaOtq-LNF4x1mV1o-Gr3o",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:4000/EquipmentType/648207ab645a45040c0d1247"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Equipmnet Status",
+			"item": [
+				{
+					"name": "Create Equipment Status",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDgxZjc0NDQyNTUwODg0YjAzOTY5ZDIiLCJuYW1lIjoiSmhvbiBBbGV4aXMgTWFjaGFkbyIsImVtYWlsIjoiam1hY2hhZG9hMTJAZ21pYWwuY29tIiwicm9sIjoiQURNSU4iLCJwYXNzd29yZCI6IiQyYSQxMCQuQVp0R2trVWl4QUZKamovYTg4N05PNXNucXBrMFloRERzYzguYXJ4NUZSUkpGZEJVOTN3bSIsImlhdCI6MTY4NjI0NTAzMSwiZXhwIjoxNjg2MjQ4NjMxfQ.qCwRo5dRB2G3CrM6P8v6Y-bjzSmuGPcfabog89DQfMA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"en uso\",\r\n    \"state\":\"Inactive\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/EquipmentStatus"
+					},
+					"response": []
+				},
+				{
+					"name": "Equipment Status",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDgxZjc0NDQyNTUwODg0YjAzOTY5ZDIiLCJuYW1lIjoiSmhvbiBBbGV4aXMgTWFjaGFkbyIsImVtYWlsIjoiam1hY2hhZG9hMTJAZ21pYWwuY29tIiwicm9sIjoiQURNSU4iLCJwYXNzd29yZCI6IiQyYSQxMCQuQVp0R2trVWl4QUZKamovYTg4N05PNXNucXBrMFloRERzYzguYXJ4NUZSUkpGZEJVOTN3bSIsImlhdCI6MTY4NjI0NTAzMSwiZXhwIjoxNjg2MjQ4NjMxfQ.qCwRo5dRB2G3CrM6P8v6Y-bjzSmuGPcfabog89DQfMA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/EquipmentStatus/"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Equipment Status",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDgxZjc0NDQyNTUwODg0YjAzOTY5ZDIiLCJuYW1lIjoiQWxleGlzIE1hY2hhZG8iLCJlbWFpbCI6ImptYWNoYWRvYTEyQGdtaWFsLmNvbSIsInJvbCI6IkFETUlOIiwicGFzc3dvcmQiOiIkMmEkMTAkNDNyWjkzWUNJVFhMMEp2NEY0dE5pZVNFdTFEaW5WQzlNV25LY2p6ZWR6ZVZ4eXRvN3dndmkiLCJpYXQiOjE2ODYyNDA3MjksImV4cCI6MTY4NjI0NDMyOX0.yHZkNApTFBX0aweiVIGkRhfaOtq-LNF4x1mV1o-Gr3o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"en uso\",\r\n    \"state\":\"Active\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/EquipmentStatus/64820975439faf02253582a3"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Equipment Status",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDgxZjc0NDQyNTUwODg0YjAzOTY5ZDIiLCJuYW1lIjoiSmhvbiBBbGV4aXMgTWFjaGFkbyIsImVtYWlsIjoiam1hY2hhZG9hMTJAZ21pYWwuY29tIiwicm9sIjoiQURNSU4iLCJwYXNzd29yZCI6IiQyYSQxMCQuQVp0R2trVWl4QUZKamovYTg4N05PNXNucXBrMFloRERzYzguYXJ4NUZSUkpGZEJVOTN3bSIsImlhdCI6MTY4NjI0NDU0OSwiZXhwIjoxNjg2MjQ4MTQ5fQ.c7Nbk5TqE0ye2L2k8fP2owKr7kZT2rhdDIdRMyIxl3I",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:4000/EquipmentStatus/64820975439faf02253582a3"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Inventory",
+			"item": [
+				{
+					"name": "Create Inventory",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDgxZjc0NDQyNTUwODg0YjAzOTY5ZDIiLCJuYW1lIjoiSmhvbiBBbGV4aXMgTWFjaGFkbyIsImVtYWlsIjoiam1hY2hhZG9hMTJAZ21pYWwuY29tIiwicm9sIjoiQURNSU4iLCJwYXNzd29yZCI6IiQyYSQxMCQuQVp0R2trVWl4QUZKamovYTg4N05PNXNucXBrMFloRERzYzguYXJ4NUZSUkpGZEJVOTN3bSIsImlhdCI6MTY4NjI0NTAzMSwiZXhwIjoxNjg2MjQ4NjMxfQ.qCwRo5dRB2G3CrM6P8v6Y-bjzSmuGPcfabog89DQfMA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serial\":\"1010\",\r\n    \"model\":\"2022asd\",\r\n    \"description\":\"Celular Grande\",\r\n    \"image\":\"https://th.bing.com/th/id/OIP.DODaalDnp53sJcSH1h5UpQHaHa?pid=ImgDet&rs=1\",\r\n    \"colour\":\"Negro\",  \r\n    \"price\":\"1000000\",\r\n    \"user\":{\r\n        \"_id\": \"64077bd1cefc83202b3eded4\"\r\n    },\r\n    \"brand\":{\r\n        \"_id\": \"64077cd6cefc83202b3ededc\"\r\n    },\r\n    \"equipmentType\":{\r\n        \"_id\": \"64077da7cefc83202b3edee3\"\r\n    },\r\n     \"equipmentStatus\":{\r\n        \"_id\": \"64077e72cefc83202b3edeea\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/inventory"
+					},
+					"response": []
+				},
+				{
+					"name": "Inventory",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDgxZjc3ZDQyNTUwODg0YjAzOTY5ZDYiLCJuYW1lIjoiQ2FybG9zIEliYXJndWVuIiwiZW1haWwiOiJjaWJhcmd1ZW4yMkBnbWlhbC5jb20iLCJyb2wiOiJET0NFTlRFIiwicGFzc3dvcmQiOiIkMmEkMTAkeUkuU0JVUnhZRTdQeTNFaThZVVNnT3ZoR3hXcUtvZUZPaXJUbnNRWmQwbFZoQWJ5N2pNM2EiLCJpYXQiOjE2ODYyNTcxMTcsImV4cCI6MTY4NjI2MDcxN30.kwgep0L-09pQY6402pjiE5WqduNSsS6kOSaN-izdCKE",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:4000/inventory/"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Inventory",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDgxZjc0NDQyNTUwODg0YjAzOTY5ZDIiLCJuYW1lIjoiSmhvbiBBbGV4aXMgTWFjaGFkbyIsImVtYWlsIjoiam1hY2hhZG9hMTJAZ21pYWwuY29tIiwicm9sIjoiQURNSU4iLCJwYXNzd29yZCI6IiQyYSQxMCQuQVp0R2trVWl4QUZKamovYTg4N05PNXNucXBrMFloRERzYzguYXJ4NUZSUkpGZEJVOTN3bSIsImlhdCI6MTY4NjI1NzE3MiwiZXhwIjoxNjg2MjYwNzcyfQ.l7LOIa7NGI1xJgGFB3_oUll1TOvB01JT4JXf2jWJ0a8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serial\":\"aslosac\",\r\n    \"model\":\"2022asd\",\r\n    \"description\":\"Celular Grande\",\r\n    \"image\":\"https://th.bing.com/th/id/OIP.DODaalDnp53sJcSH1h5UpQHaHa?pid=ImgDet&rs=1\",\r\n    \"colour\":\"Negro\",  \r\n    \"price\":\"1000000\",\r\n    \"user\":{\r\n        \"_id\": \"6481f74442550884b03969d2\"\r\n    },\r\n    \"brand\":{\r\n        \"_id\": \"64820646aeab447b87d834bb\"\r\n    },\r\n    \"equipmentType\":{\r\n        \"_id\": \"6482084e645a45040c0d124f\"\r\n    },\r\n        \"equipmentStatus\":{\r\n        \"_id\": \"64820f6bf2412b095be39cf1\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/inventory/6482117836255292606961e6"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Intentory",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDgxZjc0NDQyNTUwODg0YjAzOTY5ZDIiLCJuYW1lIjoiSmhvbiBBbGV4aXMgTWFjaGFkbyIsImVtYWlsIjoiam1hY2hhZG9hMTJAZ21pYWwuY29tIiwicm9sIjoiQURNSU4iLCJwYXNzd29yZCI6IiQyYSQxMCQuQVp0R2trVWl4QUZKamovYTg4N05PNXNucXBrMFloRERzYzguYXJ4NUZSUkpGZEJVOTN3bSIsImlhdCI6MTY4NjI0NTAzMSwiZXhwIjoxNjg2MjQ4NjMxfQ.qCwRo5dRB2G3CrM6P8v6Y-bjzSmuGPcfabog89DQfMA",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:4000/inventory/6482115d36255292606961db"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
